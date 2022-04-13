@@ -1,0 +1,89 @@
+/* TODO: Figure out how to utilize grid-template-area: For Example... .container{ grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira"
+    /* TODO: Would this make the sections for "item" redundant? What about the class, attribution???*/
+    /* TODO: Move stylin' from .container & put it back on body */
+
+.container{
+        margin: 0 auto;
+        margin-top: 12.692rem;
+        margin-bottom: 12.692rem;
+        max-width: 77.083%;
+        display: grid; /* or inline-grid */
+        grid-template: [row2-start] "daniel daniel jonathan kira" [row2-end]
+                       [row3-start] "jeanette patrick patrick kira" [row3-end]
+                       [row4-start] "footer" [row4-end]
+                       / auto 16.67% auto;
+        /*grid-template-columns: 1 fr 16.67% 16.67% 16.67% 16.67% 1fr; /* repeat(4, 1fr) or 1 fr 16.67% 16.67%        16.67% 16.67% 1fr?*/
+        /*grid-template-rows: 10% 40% 40% 10%; /*repeat(2 1fr) will using the fr add proper spacing?*/
+        /*grid-template-areas: "daniel daniel jonathan kira"
+                             "jeanette patrick patrick kira";*/
+        justify-items: center;
+        background-color: hsl(210, 46%, 95%);
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-size: 13px 1em;
+        font-weight: 500;
+}
+    /*TODO: Try using the shorthand for grid stuff, template-columns, template-rows, & template areas...
+    /*TODO: grid-template: [row2-start] "daniel daniel jonathan kira" auto [row2-end]
+                           [row3-start] "jeanette patrick patrick kira" [row3-end]
+                           / auto 16.67% auto; */
+
+.cardOne{
+    grid-area: "daniel";
+    grid-column: span 2;
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 18%;
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+}
+    /*TODO: Background image for danielC/cardOne*/
+
+.cardTwo{
+    grid-area: "jonathan";
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+.cardThree{
+    grid-area: "patrick";
+    grid-column: span 2;
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+
+.cardWhiteJ, .cardWhiteK{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(219, 29%, 14%);
+}
+
+.cardWhiteJ{
+    grid-area: "jeanette";
+}
+
+.cardWhiteK{
+    grid-area: "kira";
+    grid-row: span 2;
+}
+
+.name{
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.headshot{
+
+}
+/* TODO: Get this to work, ding dong!*/
+.verifiedGrad{
+    font: opacity 50%;
+}
+/* TODO: Get this to work, dummy!*/
+blockquote{
+    font: opacity 70%;
+}
+
+.attribution { font-size: 11px; text-align: center;
+      grid-area: "footer";
+      grid-row: span;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
