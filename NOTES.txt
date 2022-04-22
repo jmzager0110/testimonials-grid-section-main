@@ -65,3 +65,6 @@
 
 
     */
+
+    <!--- TODO: Try replacing the block quotes with paragraphs for the opacity issue--->
+        <!--- TODO: To reduce the amount of crap, use a card-header div for headshot, name, & verifiedGrad?--->
